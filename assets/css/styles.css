@@ -1,0 +1,111 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #EEEEEE;
+}
+
+.principal {
+    display: flex;
+    height: auto;
+    width: 90%;
+    margin: 20px auto;
+    border: 1px solid gray;
+}
+
+/**** Sección izquierda. ****/
+.left-section {
+    width: 35%;
+    padding: 20px;
+    background-color: #526D82;
+}
+.left-section__image {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.left-section__image img {
+    border: 2px solid white;
+    width: 80%;
+}
+.left-section__title {
+    color: white;
+    border-bottom: 1px solid white;
+    width: 90%;
+    margin-bottom: 15px;
+}
+/** Contacto. **/
+.left-section__contact {
+    padding: 15px;
+    color: white;
+}
+.left-section__contact h4 {
+    padding-bottom: 4px;
+}
+.left-section__contact i {
+    margin-right: 8px;
+}
+.left-section__contact p {
+    padding-bottom: 12px;
+}
+/** Habilidades. **/
+.left-section__skill {
+    padding: 15px;
+    color: white;
+}
+.left-section__skill li {
+    list-style: none;
+    padding-bottom: 12px;
+}
+
+/**** Sección derecha. ****/
+.right-section {
+    width: 65%;
+    padding: 20px;
+    background-color: white;
+}
+.right-section h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.right-section__title {
+    border-bottom: 1px solid gray;
+    width: 90%;
+    margin-bottom: 15px;
+}
+/** Sobre mi. **/
+.right-section__about {
+    padding-bottom: 20px;
+    width: 95%;
+}
+.right-section__about p {
+    text-align: justify;
+}
+/** Experiencia. **/
+.right-section__experience-detail {
+    display: flex;
+    padding-bottom: 12px;
+    width: 95%;
+}
+.right-section__experience-detail .experience-left {
+    width: 25%;
+}
+.right-section__experience-detail .experience-right {
+    width: 75%;
+}
+/** Estudios. **/
+.right-section__studies-detail {
+    display: flex;
+    padding-bottom: 12px;
+    width: 95%;
+}
+.right-section__studies-detail .studies-left {
+    width: 25%;
+}
+.right-section__studies-detail .studies-right {
+    width: 75%;
+}

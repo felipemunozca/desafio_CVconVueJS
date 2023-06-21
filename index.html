@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <title>M6: Evaluación sesión 1</title>
+</head>
+<body>
+    <main class="principal">
+        <section class="left-section" id="app">
+            <div class="left-section__image">
+                <img :src="profilePhoto" alt="imagen de perfil">
+            </div>
+            <div class="left-section__contact">
+                <h2 class="left-section__title">{{ titleContact }}</h2>
+                <h4><i class="fa-solid fa-phone"></i>Teléfono</h4>
+                <p>{{ contact.telefono }}</p>
+                <h4><i class="fa-regular fa-envelope"></i>Email</h4>
+                <p>{{ contact.email}}</p>
+                <h4><i class="fa-brands fa-github"></i>GitHub</h4>
+                <p>{{ contact.github }}</p>
+                <h4><i class="fa-solid fa-location-dot"></i>Dirección</h4>
+                <p>{{ contact.direccion }}</p>
+            </div>
+            <div class="left-section__skill">
+                <h2 class="left-section__title">{{ titleSkills }}</h2>
+                <ul>
+                    <li v-for="habilidad in listSkills">{{habilidad}}</li><br>
+                </ul>
+            </div>
+        </section>
+        <section class="right-section" id="app2">
+            <h1>{{ fullName }}</h1>
+            
+            <div class="right-section__about">
+                <h2 class="right-section__title">{{ career }}</h2>
+                <p>{{ aboutMe_text1 }}</p>
+                <p>{{ aboutMe_text2 }}</p>
+                <p>{{ aboutMe_text3 }}</p>
+            </div>
+            <div class="right-section__experience" >
+                <h2 class="right-section__title">{{ experienceTitle }}</h2>
+                <div class="right-section__experience-detail" v-for="experiencia in experienceWork">
+                    <div class="experience-left">
+                        <h4>{{experiencia.periodo}}</h4>
+                    </div>
+                    <div class="experience-right">
+                        <h3>{{experiencia.puesto}}</h3>
+                        <h4>{{experiencia.empresa}}</h4>
+                        <p>{{experiencia.descripcion}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="right section__studies">
+                <h2 class="right-section__title">{{ studiesTitle }}</h2>
+                <div class="right-section__studies-detail" v-for="estudios in studies">
+                    <div class="studies-left">
+                        <h4>{{estudios.periodo}}</h4>
+                    </div>
+                    <div class="studies-right">
+                        <h4>{{estudios.carrera}}</h4>
+                        <p>{{estudios.institucion}}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- CDN Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
